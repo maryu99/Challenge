@@ -1,0 +1,257 @@
+/*padding: top right bottom left*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primario: #000000; /*#E5E5E5*/
+    --color-secundario: #674188;
+    --color-terciario: #9392B8;
+    --color-mensaje: #ffffff;
+
+    --fuente-inter: 'Inter';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    box-sizing: border-box;
+}
+
+.seccion {
+    display: flex; /*display flex alinea de acuerdo al elemento que es mayor*/ /*Se tiene que activar el flexbox (de esta manera) para poder acceder a sus demas propiedades */
+    align-items: center;
+    padding: 3% 3%;
+    justify-content: space-between;
+    gap: 80px;
+    
+}
+
+.seccion__logo {
+    /*padding: 40px 0px 0px 84px;*/
+    height: 700px;
+}
+
+.seccion__logo__imagen {
+    height: 48px;
+    width: 31.09px;
+}
+
+.seccion__textarea {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+#texto_ingresado {
+    background-color: var(--color-primario);
+    border: none; /*quitar el border*/
+    width: 100%;
+    height: 535px;
+    color: var(--color-secundario);
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+    resize: none; /*evitar que el textarea se haga mas grande*/
+    outline: none;  /*Quitar el efecto de border (el efecto resplandor)*/
+}
+
+#texto_ingresado::placeholder {
+    color: var(--color-secundario);
+}
+
+.seccion__alerta {
+    font-family: var(--fuente-inter);
+    font-size: 0.75rem;
+    
+}
+
+.seccion__botones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.seccion__botones__parrafo {
+    display: flex;
+    flex-direction: row;
+    /*visibility: hidden;*/
+    font-family: var(--fuente-inter);
+    font-size: 0.75rem;
+    color: var(--color-mensaje);
+    gap: 3px;
+}
+
+.seccion__botones__buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.seccion__botones__encriptar {
+    background-color: var(--color-secundario);
+    border-color: var(--color-terciario);
+    border-width: thin;
+    border-style: solid;
+    border-radius: 24px;
+    width: 50%;
+    height: 67px;
+    color: #ffffff;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.seccion__botones__desencriptar {
+    background-color: var(--color-terciario);
+    border-color: var(--color-secundario);
+    border-width: thin;
+    border-style: solid;
+    border-radius: 24px;
+    width: 50%;
+    height: 67px;
+    font-family: var(--fuente-inter);
+    color: var(--color-mensaje);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.seccion__contenido {
+    background-color: var(--color-primario);
+    width: 30%; /*400px*/
+    height: 700px;
+    border-radius: 32px;
+    border-color: var(--color-mensaje);
+    border-width: thin;
+    border-style: solid;
+    box-shadow: 0 10px 20px -10px; /*izquierda-derecha, arriba-abajo desenfoque-sombra, anchura*/
+}
+
+
+#texto_encriptado {
+    background-color: var(--color-primario);
+    border: none;
+    width: 85%;
+    height: 550px;
+    margin: 10% 7.5% 0px 7.5%;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    color: var(--color-mensaje);
+    resize: none;
+    outline: none;
+}
+
+.seccion__contenido__copiar {
+    background-color: #ffffff;
+    border-color: var(--color-secundario);
+    border-width: thin;
+    border-style: solid;
+    border-radius: 24px;
+    width: 85%;
+    height: 67px;
+    font-family: var(--fuente-inter);
+    color: var(--color-secundario);
+    font-size: 1rem;
+    margin: 6.5% 7.5%;
+    text-align: center;
+}
+
+.seccion__contenido__imagen {
+    width: 80%;
+    padding: 180px 10% 32px 10%;
+}
+
+.seccion__contenido__mensaje  {
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color-mensaje);
+    padding: 0px 32px 16px 32px;
+}
+.seccion__contenido__parrafo {
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    color: var(--color-mensaje);
+    padding: 0px 32px;
+}
+
+.footer {
+    background-color: #232323;
+    padding: 24px;
+    color: var(--color-mensaje);
+    text-align: center;
+    font-family: var(--fuente-inter);
+}
+
+@media(max-width: 768px) {
+    .seccion{
+        flex-direction: column;
+        padding: 10% 5% 5% 5%;
+    }
+    .seccion__logo{
+        height: auto;
+        width: 100%;
+    }
+    .seccion__logo__imagen{
+        padding-left: 40px;
+    }
+    .seccion__contenido {
+        width: 100%;
+        height: 343px;
+        align-content: center;
+    }
+    .seccion__textarea{
+        width: 100%;
+        padding: 0 6%;
+    }
+    .seccion__contenido__imagen{
+        display: none;
+    }
+    .seccion__contenido__texto {
+        height: 180px;
+        width: 624px;
+        margin: 32px 32px 0 32px;
+    }
+    .seccion__contenido__copiar {
+        margin: 0 7.5% 4.5% 7.5%;
+    }
+    #texto_encriptado {
+        height: 50%;
+        margin: 5% 7.5%;
+    }
+    
+}
+
+@media(max-width: 375px){
+    #texto_ingresado{
+        width: 100%;
+    }
+    .seccion__logo__imagen{
+        padding-left: 0;
+    }
+    .seccion__botones__buttons{
+        flex-direction: column;
+    }
+    .seccion__botones__encriptar{
+        width: 100%;
+    }
+    .seccion__botones__desencriptar{
+        width: 100%;
+    }
+    .seccion__contenido{
+        width: auto;
+    }
+    .seccion__contenido__texto{
+        width: auto;
+    }
+    .seccion__contenido__copiar{
+        width: 279px;
+    }
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/llave.png">
+</head>
+
+<body>
+    <main class="seccion">
+        <div class="seccion__logo">
+            <img src="./img/Vector.png" alt="logo" class="seccion__logo__imagen">
+        </div>
+        <section class="seccion__textarea">
+           
+            <textarea type="text" name="textarea" id="texto_ingresado" onclick="cliTextarea();" autofocus placeholder="Ingrese el texto aquí"></textarea>
+
+            <div class="seccion__botones">
+                <div class="seccion__botones__parrafo" id="avisos">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" style="padding: 1px;">
+                        <path fill="currentColor"
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2" />
+                    </svg>
+                    <p class="seccion__alerta" id="alerta"></p> 
+                </div>
+                <div class="seccion__botones__buttons">
+                    <button class="seccion__botones__encriptar" onclick="btn_encriptar();" id="encriptar">Encriptar</button>
+                    <button class="seccion__botones__desencriptar" onclick="btn_desencriptar();"id="desencriptar" disabled>Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="seccion__contenido" id="ocultar_contenido">
+            <img src="./img/encapuchado.png" alt="imagen" class="seccion__contenido__imagen">
+
+            <h2 class="seccion__contenido__mensaje" id="mensaje">Ningún mensaje fue econtrado</h2>
+
+            <p class="seccion__contenido__parrafo" id="parrafo" id="ocultar_contenido">Ingrese el texto que desee encriptar o desencriptar</p>
+        </div>
+
+        <div class="seccion__contenido" hidden id="mostrar_contenido">
+            <textarea name="" class="seccion__contenido__texto" id="texto_encriptado"></textarea>
+            <button type="submit" class="seccion__contenido__copiar" onclick="btn_copiar();" id="bt_copiar">Copiar</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__parrafo">Derechos reservados. Desarrollador por Maribel Cortes Ricaño</p>
+    </footer>
+
+    <script src="./js/encriptar.js"></script>
+</body>
+
+</html>
